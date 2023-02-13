@@ -1,18 +1,37 @@
 <template>
-  <div class="home">
-    <img alt="Vue logo" src="../assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+  <div class=" pop text-[#1E293B]">
+    <Header/>
+    <Hero/>
+    <steps/>
+    <HomeDonate/>
+    <AngelDonor/>
+    <DownloadApp/>
+    <Footer/>
+    <TermsBar/>
   </div>
 </template>
 
 <script>
 // @ is an alias to /src
-import HelloWorld from '@/components/HelloWorld.vue'
-
+import Header from '@/components/Header.vue';
+import Hero from '@/components/Hero.vue';
+import steps from '@/components/steps.vue';
+import AngelDonor from '@/components/AngelDonor.vue';
+import DownloadApp from '@/components/DownloadApp.vue';
+import Footer from "@/components/Footer.vue";
+import TermsBar from "@/components/TermsBar";
+import HomeDonate from "@/components/HomeDonate"
 export default {
   name: 'HomeView',
   components: {
-    HelloWorld
+    Header,
+    Hero,
+    steps,
+    AngelDonor,
+    DownloadApp,
+    Footer,
+    TermsBar,
+    HomeDonate
   }
 }
 </script>
