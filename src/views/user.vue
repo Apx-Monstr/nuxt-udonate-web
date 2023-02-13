@@ -26,7 +26,7 @@
             <Header type = "Charity"/>
             <div class="px-[184px] py-[18px] w-full text-xl">
                 <div class = "pb-4">
-                    Accepting Donations
+                    Accepting Donationsdsrtes4
                     <div class="flex gap-4 flex-wrap pt-4">
                         <Donation/>
                         <Donation/>
