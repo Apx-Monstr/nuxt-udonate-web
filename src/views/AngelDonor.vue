@@ -98,7 +98,10 @@ export default {
                 desc: this.desc,
                 add: this.add,
                 pin: this.pin,
-                type: this.selected
+                type: this.selected,
+                status:this.status,
+                to:"",
+                path:this.name
             }
             const msgref = firebase.database().ref("/ad/" + this.name)
             Axios.get(msgref.toString() + ".json").then(response=>{

@@ -4,6 +4,7 @@ import JoinNow from '../views/JoinNow.vue';
 import AngelDonor from '../views/AngelDonor.vue';
 import user from '../views/user.vue';
 import login from '../views/login.vue';
+import Donate from '../views/Donate.vue'
 
 const routes = [
   {
@@ -21,15 +22,16 @@ const routes = [
     name: 'Angel Donor',
     component: AngelDonor
   },
-  {
-    path: '/abcd',
-    name: 'User',
-    component: user
-  },
+  
   {
     path: '/login',
     name: 'User',
     component: login
+  },
+  {
+    path: '/donate',
+    name: 'Donate',
+    component: Donate
   },
   {
     path: '/user',

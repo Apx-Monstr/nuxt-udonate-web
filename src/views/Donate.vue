@@ -50,18 +50,74 @@
 import firebase from'firebase/app';
 import Axios from 'axios';
 import 'firebase/database';
+import DonateCard from '@/components/DonateCard.vue';
 export default {
     name:"DonateView",
     data(){
         return {
             user:null,
             allData:null,
-            hideClass = "hidden"
+            selected:"",
+            s1:"",
+            s2:"hidden",
+            s3:"hidden",
+            desc:""
+        }
+    },
+    components:{
+        DonateCard
+    },methods:{
+        select(name){
+            this.selected = "( " + name + " )"
+        },
+        nextOne(){
+            this.s1 = "hidden"
+            this.s2 = ""
+        },
+        nextTwo(){
+            this.uploadData();
+            this.s2 = "hidden"
+            this.s3 = ""
+        },
+        routeHome(){
+            this.$router.push({path:"/user"})
+        },
+        getUser(){
+            const msgref = firebase.database().ref("/user/" + sessionStorage.getItem("user"))
+            Axios.get(msgref.toString() + ".json").then(response=>{
+                if (response.data !== null){
+                    this.userData = response.data
+                    this.name = this.userData['name']
+                    this.add = this.userData['add']
+                    this.mnum = this.userData['mob']
+                    this.pin = this.userData['pin']
+                }
+            })
+        },
+        async uploadData(){
+            let data = {
+                name: this.name,
+                mno: this.mnum,
+                desc: this.desc,
+                add: this.add,
+                pin: this.pin,
+                type: this.selected.toUpperCase(),
+                from:sessionStorage.getItem("user"),
+                status:"l",
+                to:"",
+            }
+            let path = data['name'] + data['mno'] + data['desc'][2] + data['desc'][0]
+            data['path'] = path
+            const msgref = firebase.database().ref("/donations/" + path)
+            Axios.get(msgref.toString() + ".json").then(response=>{
+                if (response.data === null){
+                    firebase.database().ref("/donations/" +path).set(data)
+                }
+            })
         }
     },
     created(){
-        this.user = sessionStorage.getItem("user");
-        this.allData = sessionStorage.getItem("data")
+        this.getUser();
         // const msgref = firebase.database().ref("/user/")
     }
 }

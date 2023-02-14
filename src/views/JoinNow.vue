@@ -1,7 +1,7 @@
 <template>
   <div class="h-[100vh] flex">
     <div class="w-[1168px] h-[584px] m-auto rounded bg-[#E2E8F0] flex">
-      <AngelDonorSign/>
+        <AngelDonorSign/>
       <div class = "relative flex flex-1 flex-col p-10 items-center justify-center">
         <div class="flex flex-col items-center gap-4">
             <span class = "text-4xl font-bold">
@@ -16,7 +16,7 @@
                 Join Now
             </button>
             <p class = "text-sm">
-                Already have an account? Sign In
+                Already have an account? <router-link to="/login"> Sign In </router-link>
             </p>
         </div>
         <svg class="absolute bottom-0" width="303" height="69" viewBox="0 0 303 69" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -117,6 +117,18 @@ export default {
           firebase.database().ref("/users/" +this.user).set({
             pswd: this.pswd,
             type:"i"
+          })
+        }
+      })
+      const usermsgref = firebase.database().ref("/user/"+this.user)
+      Axios.get(usermsgref.toString() + ".json").then(response=>{
+        if (response.data === null){
+          firebase.database().ref("/user/" + this.user).set({
+            name:"",
+            add:"",
+            mob:"",
+            pin:"",
+            type:"I"
           })
         }
       })

@@ -5,7 +5,9 @@
         </svg>
         <div class="flex flex-col items-center gap-4 text-4xl font-bold pop ">
             Don't wanna sign up... <br> Be an Angel
-            <AngelDonorBtn class = "mt-2"/>
+            <router-link to="/angelDonor">
+                <AngelDonorBtn class = "mt-2"/>
+            </router-link>
         </div>
     </div>
 </template>
