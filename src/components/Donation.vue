@@ -129,7 +129,7 @@
             </button>
         </div>
     </div>
-    <div v-if="utype === 'I' && dtype === 'acc' && text['from'] === user" @click="showModal" class = "relative w-[320px] h-[175px] rounded bg-[#E2E8F0]"> 
+    <div v-if="utype === 'I' && dtype === 'acc' && text['from'] === user && (text['status'] === 'l' || text['status'] === 'a')" @click="showModal" class = "relative w-[320px] h-[175px] rounded bg-[#E2E8F0]"> 
         <div class="px-4 pt-4">
             {{text["name"]}}
         </div>

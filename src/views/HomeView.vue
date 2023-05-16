@@ -4,7 +4,9 @@
     <Hero/>
     <steps/>
     <HomeDonate/>
+    <router-link to="/angelDonor">
     <AngelDonor/>
+    </router-link>
     <DownloadApp/>
     <Footer/>
     <TermsBar/>
