@@ -1,4 +1,7 @@
-# pe2web
+# uDonate-v1
+
+## Description
+Udonate is a website that allows you to donate books, clothes, and medicines to NGOs in India. It is a great way to declutter your home and help those in need.
 
 ## Project setup
 ```
