@@ -33,3 +33,4 @@ See [Configuration Reference](https://cli.vuejs.org/config/).
 - [Neelesh Ranjan](https://github.com/Apx-Monstr)
 - [Tanesha Gahtori](https://github.com/taneshagahtori)
 - [Kartik Mishra](https://github.com/Hacker-KM)
+- [Ayushi Agarwal](https://github.com/ayushi0111)
