@@ -3,10 +3,14 @@
 ## Description
 Udonate is a website that allows you to donate books, clothes, and medicines to NGOs in India. It is a great way to declutter your home and help those in need.
 
+## Design Screenshot
+![uDonate _ Home](https://github.com/taneshagahtori/udonate-web-application/assets/104068017/45f2ba3e-16e2-41c5-914f-87b9fa007354)
+
 ## Project setup
 ```
 npm install
 ```
+
 
 ### Compiles and hot-reloads for development
 ```
