@@ -8,10 +8,10 @@ https://udonate-v1.netlify.app
 
 ## Design Screenshot
 <div align="center">
-  <img src="https://github.com/taneshagahtori/udonate-web-application/assets/104068017/45f2ba3e-16e2-41c5-914f-87b9fa007354" alt="IMG-20231018-WA0026" width="400"/>
+  <img src="https://github.com/taneshagahtori/udonate-web-application/assets/104068017/45f2ba3e-16e2-41c5-914f-87b9fa007354" alt="IMG-20231018-WA0026" width="300"/>
   &nbsp;&nbsp;&nbsp;&nbsp;
 </div>
-![uDonate _ Home](https://github.com/taneshagahtori/udonate-web-application/assets/104068017/45f2ba3e-16e2-41c5-914f-87b9fa007354)
+<!-- ![uDonate _ Home](https://github.com/taneshagahtori/udonate-web-application/assets/104068017/45f2ba3e-16e2-41c5-914f-87b9fa007354) -->
 
 ## Project setup
 ```
